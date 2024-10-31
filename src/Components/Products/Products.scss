@@ -1,0 +1,51 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+//   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+  &__outer-cont{
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.2),
+                inset -4px -4px 10px rgba(255, 255, 255, 0.7);
+  }
+
+  &__header {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: YesevaOne;
+  }
+  &__cont {
+    width: 40vw;
+    display: flex;
+    border: 10px solid rgba($color: #000000, $alpha: 0.05);
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  &__image {
+    width: 100%;
+  }
+  &__name {
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0.25rem 0 0.25rem 0;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    // font-family: JosefinSans;
+  }
+}
