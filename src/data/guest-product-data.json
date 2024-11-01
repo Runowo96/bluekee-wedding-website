@@ -3,8 +3,8 @@
         "id":"1",
         "name": "Name Cutouts",
         "image": "/images/logo.PNG",
-        "material": ["Birchood", "Acrylic (red, blue, green, yellow)", "Walnut"],
-        "stains": ["red","blue","yellow","green"],
+        "material": ["Birchood, ", "Acrylic (red, blue, green, yellow), ", "Walnut"],
+        "stains": ["red, ","blue, ","yellow, ","green"],
         "Starting_at": "$1.25 / guest"
     },
     {
@@ -12,7 +12,7 @@
         "name": "Napkin Rings",
         "image": "/images/logo.PNG",
         "material": ["Birchood", "Acrylic (red, blue, green, yellow)", "Walnut"],
-        "stains": ["red","blue","yellow","green"],
+        "stains": ["red, ","blue, ","yellow, ","green"],
         "Starting_at": "$1.50 / guest"
     },
     {
