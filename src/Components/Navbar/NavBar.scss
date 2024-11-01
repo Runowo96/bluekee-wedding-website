@@ -35,6 +35,8 @@
 
 
 .navbar {
+  position: relative;
+  z-index: 5;
   height: 12.5vw;
   display: flex;
   position: relative;
@@ -92,6 +94,7 @@
 
   &__dropdown-ul {
     position: absolute;
+    z-index: auto;
     display: flex;
     flex-direction: column;
     top: 12.5vw;
@@ -105,6 +108,7 @@
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 2rem;
     gap: 2rem;
+
   }
   &__dropdown-ul-desktop {
     display: none;
@@ -124,6 +128,8 @@
   //   &__list-item {
   //   }
   &__list-item-text {
+    text-decoration: none;
+    color: black;
     font-size: 2rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
