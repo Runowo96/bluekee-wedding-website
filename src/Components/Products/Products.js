@@ -8,7 +8,7 @@ function Products({ data, name }) {
 
             <div className="products">
       {data.map((data) => (
-        <div id={data.id} className="products__cont">
+        <div key={data.id} className="products__cont">
           <img className="products__image" src={data.image} alt={data.name} />
           <h4 className="products__name">{data.name}</h4>
         </div>
