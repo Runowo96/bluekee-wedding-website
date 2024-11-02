@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Packages.scss";
-import guest from "../../assets/icons/guests-icon.svg";
-import table from "../../assets/icons/table-icon.svg";
-import room from "../../assets/icons/room-icon.svg";
+import guest from "../../assets/icons/guest-icon-white.svg";
+import table from "../../assets/icons/table-icon-white.svg";
+import room from "../../assets/icons/room-icon-white.svg";
 import PackageInfo from "../PackageInfo/PackageInfo";
 
 function Packages() {
@@ -36,7 +36,8 @@ function Packages() {
           className="packs__sub-cont sapphire"
         >
           <div className="packs__sub-head-cont">
-            <h3 className="packs__sub-header">SAPPHIRE</h3>
+            <h3 className="packs__sub-header">
+            BLEU</h3>
             <h4 className="packs__discount">5% OFF</h4>
           </div>
           <div className="packs__sub-para-cont2">
@@ -61,7 +62,7 @@ function Packages() {
         </div>
         <article onClick={() => ActRuby()} className="packs__sub-cont ruby">
           <div className="packs__sub-head-cont">
-            <h3 className="packs__sub-header">RUBY</h3>
+            <h3 className="packs__sub-header">ROUGE</h3>
             <h4 className="packs__discount">10% OFF</h4>
           </div>
           <div className="packs__sub-para-cont2">
@@ -96,7 +97,7 @@ function Packages() {
           className="packs__sub-cont emerald"
         >
           <div className="packs__sub-head-cont">
-            <h3 className="packs__sub-header">EMERALD</h3>
+            <h3 className="packs__sub-header">VERT</h3>
             <h4 className="packs__discount">15% OFF</h4>
           </div>
           <div className="packs__sub-para-cont2">
@@ -134,7 +135,7 @@ function Packages() {
 
         <article className="packs__sub-cont diamond">
           <div className="packs__sub-head-cont">
-            <h3 className="packs__sub-header">DIAMOND</h3>
+            <h3 className="packs__sub-header">GOLD</h3>
             <h4 className="packs__discount">
               FULL CUSTOM <br /> DESIGN
             </h4>

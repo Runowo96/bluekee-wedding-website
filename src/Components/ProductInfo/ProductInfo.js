@@ -16,7 +16,7 @@ function ProductInfo({ data, onNext, onClose, onPrev }) {
             onClose();
           }}
         >
-          {" "}
+       
           <img src={backIcon} alt="back arrow" />
         </button>
 
