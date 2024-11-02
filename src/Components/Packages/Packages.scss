@@ -110,10 +110,12 @@ background-color: beige;
     flex-direction: column;
     width: 100%;
     align-items: center;
+    
   }
   &__icons {
     width: 100%;
     filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+    
 
 
     @include tablet {
@@ -127,6 +129,7 @@ background-color: beige;
     text-align: center;
     font-size: 1.25rem;
     font-family: JosefinSans;
+    
     @include tablet {
       font-size: 2rem;
     }
@@ -139,29 +142,46 @@ background-color: beige;
     align-items: center;
     flex-direction: column;
     gap: 0.5rem;
+
     @include tablet {
+      height: fit-content;
+      width: fit-content;
+      overflow: visible;
       gap: 1.5rem;
+    }
+    @include desktop{
+
     }
   }
   &__sub-header {
     font-family: YesevaOne;
     font-size: 2rem;
     text-align: center;
+
     @include tablet {
       font-size: 2.5rem;
+      height: fit-content;
+      width: fit-content;
+      overflow: visible;
     }
     @include desktop {
       font-size: 3rem;
+
     }
   }
   &__discount {
     font-family: YesevaOne;
     font-size: 1rem;
     text-align: center;
+
     @include tablet {
       font-size: 1.5rem;
+      height: fit-content;
+      width: fit-content;
+      overflow: visible;
     }
     @include desktop {
+
       font-size: 2rem;
     }
   }
@@ -178,6 +198,9 @@ background-color: beige;
       padding-bottom: 1rem;
     }
     @include desktop {
+      height: fit-content;
+      width: fit-content;
+      overflow: visible;
       flex-direction: row;
       justify-content: center;
       gap: .5rem;
@@ -229,8 +252,26 @@ background-color: beige;
     @include tablet {
       font-size: 1.25rem;
     }
+    @include desktop{
+      display: none;
+    }
   }
+  &__click-info {
+    position: absolute;
+    bottom: 0.5rem;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    display: none;
+
+    @include desktop{
+      display: block;
+    }
+  }
+ 
 }
+
 .package-info {
   &__tablet {
     display: none;
