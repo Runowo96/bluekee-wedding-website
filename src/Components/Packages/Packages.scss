@@ -232,7 +232,7 @@ background-color: beige;
       }
     }
     @include tablet {
-      font-size: 1.75rem;
+      font-size: 1.25rem;
       width: 90%;
       padding-top: 2rem;
       //   height: 100%;
@@ -290,34 +290,34 @@ background-color: beige;
   background-color: #000080;
   // background-color: #03989e;
   // background-color: #d0daf2;
-  animation: slideInFromLeft 0.75s ease-out forwards;
+  animation: slideInFromLeft 0.25s ease-out forwards;
 
   @include tablet {
     animation: none;
-    animation: slideInFromBottom 0.75s ease-out forwards;
+    animation: slideInFromBottom 0.25s ease-out forwards;
     margin-left: 1.1vw;
   }
 }
 .ruby {
   background-color: #641226;
   // background-color: #fdc6de;
-  animation: slideInFromRight 0.75s ease-out forwards;
+  animation: slideInFromRight 0.25s ease-out forwards;
   @include tablet {
     animation: none;
-    animation: slideInFromBottom 0.75s ease-out forwards;
+    animation: slideInFromBottom 0.25s ease-out forwards;
   }
 }
 .emerald {
   background-color: #00674f;
-  animation: slideInFromLeft 0.75s ease-out forwards;
+  animation: slideInFromLeft 0.25s ease-out forwards;
   @include tablet {
     animation: none;
-    animation: slideInFromBottom 0.75s ease-out forwards;
+    animation: slideInFromBottom 0.25s ease-out forwards;
   }
 }
 .diamond {
   background-color: #B9F2FF;
-  animation: slideInFromRight 0.75s ease-out forwards;
+  animation: slideInFromRight 0.25s ease-out forwards;
   color: black;
   text-shadow: 2px 2px 5px white;
 
@@ -326,6 +326,6 @@ background-color: beige;
     flex-direction: row;
     padding: 4vw 5vw 4vw 5vw;
     animation: none;
-    animation: slideInFromBottom2 1.5s ease-out forwards;
+    animation: slideInFromBottom2 0.5s ease-out forwards;
   }
 }
