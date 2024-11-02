@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 h1, h3{
   font-family: JosefinSans;
@@ -14,14 +14,16 @@ h1, h3{
 h2{
   font-family: YesevaOne;
   font-size: 2rem;
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 // .test{
 //   z-index: 3;
 // }
-// .test2{
-//   z-index: 4;
-// }
+.test2{
+overflow-x: hidden;
+}
 
 
 
