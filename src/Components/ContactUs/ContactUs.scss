@@ -1,0 +1,72 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem; // Add padding for mobile devices
+    max-width: 400px; // Set a max-width for better layout on small screens
+    margin: auto; // Center the form in the middle of the page
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Optional shadow for visual depth
+    border-radius: 10px; // Rounded corners
+  
+    h2 {
+      font-family: YesevaOne; // Style the header
+      margin-bottom: 1rem; // Space between header and form
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem; // Space between form fields
+  
+      label {
+        font-family: JosefinSans; // Style labels
+        margin-bottom: 0.5rem; // Space between label and input
+      }
+  
+      input,
+      textarea {
+        width: 100%; // Make inputs full width
+        padding: 0.5rem; // Add padding inside inputs
+        border: 1px solid #ccc; // Light border
+        border-radius: 5px; // Rounded corners
+        font-size: 1rem; // Font size for better readability
+        font-family: inherit; // Inherit font from parent
+  
+        &:focus {
+          border-color: blue; // Highlight border on focus
+          outline: none; // Remove default outline
+        }
+      }
+  
+      .error {
+        color: red;
+        font-size: 0.9rem; // Smaller font for error messages
+      }
+  
+      button {
+        padding: 0.75rem; // Increased padding for touch targets
+        background-color: blue; // Button color
+        color: white; // Text color
+        border: none; // Remove border
+        border-radius: 5px; // Rounded corners
+        cursor: pointer; // Pointer on hover
+        font-size: 1rem; // Button font size
+        transition: background-color 0.3s; // Transition for hover effect
+  
+        &:hover {
+          background-color: darkblue; // Darker color on hover
+        }
+      }
+    }
+  
+    // Media queries for smaller screens
+    @media (max-width: 480px) {
+      max-width: 90%; // Full width on very small screens
+      padding: 1rem; // Ensure padding is consistent
+    }
+  }
+  

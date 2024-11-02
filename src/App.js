@@ -5,6 +5,7 @@ import NavBar from "./Components/Navbar/NavBar";
 import Packages from "./Components/Packages/Packages";
 import ProductLines from "./Components/ProductLines/ProductLines";
 import Artists from "./Components/Artists/Artists";
+import ContactUs from "./Components/ContactUs/ContactUs";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +14,7 @@ function App() {
   const packagesRef = useRef(null);
   const productLinesRef = useRef(null);
   const artistsRef = useRef(null);
+  const contactUsRef = useRef(null);
 
   const scrollToSection = (sectionRef) => {
     sectionRef.current.scrollIntoView({ behavior: "smooth" });
@@ -25,7 +27,7 @@ function App() {
         <nav>
           <NavBar
             scrollToSection={scrollToSection}
-            sections={{ heroRef, packagesRef, productLinesRef, artistsRef }}isOpen={isOpen}setIsOpen={setIsOpen}
+            sections={{ heroRef, packagesRef, productLinesRef, artistsRef, contactUsRef }}isOpen={isOpen}setIsOpen={setIsOpen}
           />
         </nav>
       </header>
@@ -41,6 +43,9 @@ function App() {
         </section>
         <section id="artists" ref={artistsRef}>
           <Artists />
+        </section>
+        <section id="artists" ref={contactUsRef}>
+          <ContactUs />
         </section>
       </main>
     </div>
