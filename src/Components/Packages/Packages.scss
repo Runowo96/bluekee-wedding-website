@@ -179,6 +179,8 @@ background-color: beige;
     }
     @include desktop {
       flex-direction: row;
+      justify-content: center;
+      gap: .5rem;
     }
   }
   &__sub-para-cont {
