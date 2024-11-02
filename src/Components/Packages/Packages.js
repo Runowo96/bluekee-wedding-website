@@ -149,7 +149,7 @@ function Packages() {
             Bespoke package offering a fully customized experience. It includes
             three meetings: an initial consultation (in-person or virtual) to
             determine theme and products, a virtual meeting to review initial
-            designs, and a in-person final virtual meeting for proof approval.{" "}
+            designs, and a in-person final meeting for proof approval.{" "}
           </p>
         </article>
       </div>
