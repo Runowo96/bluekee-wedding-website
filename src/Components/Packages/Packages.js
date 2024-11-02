@@ -104,19 +104,19 @@ function Packages() {
             <div className="packs__inner-cata">
               <img className="packs__icons" src={guest} alt="icon of a guest" />
               <p className="packs__sub-sub-text">
-                Select Two <br /> (3)
+                Select Three <br /> (3)
               </p>
             </div>
             <div className="packs__inner-cata">
               <img className="packs__icons" src={table} alt="icon of a guest" />
               <p className="packs__sub-sub-text">
-                Select Two <br /> (3)
+                Select Three <br /> (3)
               </p>
             </div>
             <div className="packs__inner-cata">
               <img className="packs__icons" src={room} alt="icon of a guest" />
               <p className="packs__sub-sub-text">
-                Select One <br /> (2)
+                Select Two <br /> (2)
               </p>
             </div>
           </div>
