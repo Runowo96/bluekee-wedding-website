@@ -1,0 +1,138 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.artists {
+
+@include desktop{
+    padding-right: 10vw;
+    padding-left: 10vw;
+}
+  &__outer-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    @include desktop{
+        flex-direction: row;
+        gap: 3rem;
+
+    }
+
+
+  }
+
+  &__cont {
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
+    @include desktop{
+        flex-direction: column;
+    }
+  }
+
+  &__header {
+    text-align: center;
+    @include tablet{
+        font-size: 2.5rem;
+        padding-bottom: 1rem;
+    }
+    @include desktop{
+        padding-top: 1rem;
+    }
+  }
+
+  &__img-cont {
+    position: relative; /* Parent container for absolute positioning */
+    width: 100%;
+    @include tablet {
+      width: 60%;
+    }
+    @include desktop{
+        width: 100%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2),
+      -1px -1px 5px rgba(255, 255, 255, 0.7);
+  }
+
+  &__name {
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute; /* Overlay the image */
+    bottom: 0; /* Position the name at the bottom of the image */
+    width: 100%;
+    font-family: YesevaOne;
+    font-size: 1.5rem;
+    color: black;
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.75
+    ); /* Optional background for readability */
+    padding: 0.75rem 0.5rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    @include tablet {
+      display: none;
+    }
+    @include desktop{
+        display: block;
+    }
+  }
+  &__name-tablet {
+    display: none;
+    @include tablet {
+      display: flex;
+      font-size: 2.25rem;
+      font-family: YesevaOne;
+      text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+    }
+    @include desktop{
+        display: none;
+    }
+  }
+
+  &__info-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+    @include tablet {
+      width: 50%;
+      padding: 2rem;
+      gap: 1rem;
+    }
+    @include desktop{
+        width: 100%;
+        padding: 1rem;
+    }
+  }
+
+  &__bio {
+    font-family: JosefinSans;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+    @include tablet {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+.order-fix {
+  @include tablet {
+    flex-direction: row-reverse;
+  }
+  @include desktop{
+    flex-direction: column;
+  }
+}
