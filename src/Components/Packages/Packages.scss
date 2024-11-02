@@ -58,7 +58,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  
+
   @include tablet {
     flex-direction: row;
     justify-content: center;
@@ -90,6 +90,8 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 8vw 2vw 8vw 2vw;
     text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    text-shadow: 2px 2px 5px black;
 
     @include tablet {
       flex-direction: column;
@@ -101,9 +103,8 @@
       width: 30%;
     }
   }
-  &__sub-cont-seperate{
+  &__sub-cont-seperate {
     display: flex;
-    
   }
   &__inner-cata {
     display: flex;
@@ -113,7 +114,9 @@
   }
   &__icons {
     width: 100%;
-  
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+
+
     @include tablet {
       width: 50%;
     }
@@ -144,6 +147,7 @@
   &__sub-header {
     font-family: YesevaOne;
     font-size: 2rem;
+    text-align: center;
     @include tablet {
       font-size: 2.5rem;
     }
@@ -174,7 +178,7 @@
       padding-top: 1rem;
       padding-bottom: 1rem;
     }
-    @include desktop{
+    @include desktop {
       flex-direction: row;
     }
   }
@@ -214,47 +218,47 @@
       }
     }
   }
-  &__tap-info{
+  &__tap-info {
     position: absolute;
     bottom: 0.5rem;
     transform: translateX(-50%);
     left: 50%;
     width: 100%;
     text-align: center;
-    @include tablet{
+    @include tablet {
       font-size: 1.25rem;
     }
   }
 }
-.package-info{
-  &__tablet{
+.package-info {
+  &__tablet {
     display: none;
-    @include tablet{
+    @include tablet {
       display: flex;
     }
-
   }
-  &__mobile{
-      @include tablet{
-    display: none;
+  &__mobile {
+    @include tablet {
+      display: none;
+    }
   }
-  }
-
 }
 
-
 .sapphire {
-  background-color: #d0daf2;
+  background-color: #000080;
+  // background-color: #03989e;
+  // background-color: #d0daf2;
   animation: slideInFromLeft 0.75s ease-out forwards;
+
   @include tablet {
     animation: none;
     animation: slideInFromBottom 0.75s ease-out forwards;
     margin-left: 1.1vw;
   }
-
 }
 .ruby {
-  background-color: #fdc6de;
+  background-color: #641226;
+  // background-color: #fdc6de;
   animation: slideInFromRight 0.75s ease-out forwards;
   @include tablet {
     animation: none;
@@ -262,7 +266,7 @@
   }
 }
 .emerald {
-  background-color: #d8f9e5;
+  background-color: #00674f;
   animation: slideInFromLeft 0.75s ease-out forwards;
   @include tablet {
     animation: none;
@@ -270,7 +274,7 @@
   }
 }
 .diamond {
-  background-color: #f0fdff;
+  background-color: #a67c00;
   animation: slideInFromRight 0.75s ease-out forwards;
   @include tablet {
     width: 93%;
