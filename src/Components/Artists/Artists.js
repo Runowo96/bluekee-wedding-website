@@ -1,7 +1,7 @@
 import React from "react";
 import "./Artists.scss";
-import blue from "../../assets/images/blue - closeup.jpg";
-import kee from "../../assets/images/kee-closeup.jpg";
+import blue from "../../assets/images/blue-closeup.avif";
+import kee from "../../assets/images/kee-closeup.avif";
 
 function Artists() {
   return (
