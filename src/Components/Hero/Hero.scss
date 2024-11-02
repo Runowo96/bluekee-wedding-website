@@ -71,7 +71,7 @@
     border-radius: 1px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    animation: slideUp 0.75s ease-out forwards;
+    animation: slideUp 0.25s ease-out forwards;
     @include tablet {
       padding: 3vw 15vw 3vw 15vw;
       gap: 1rem;
