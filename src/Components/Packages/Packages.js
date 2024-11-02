@@ -55,7 +55,9 @@ function Packages() {
             </div>
           </div>
 
-          <p className="packs__tap-info">- - - Tap for more info - - -</p>
+          <p className="packs__tap-info">Tap for more info</p>
+          <p className="packs__click-info">Click for more info</p>
+
         </article>
         <div className="package-info__mobile">
           {sapphire && <PackageInfo sapphire={sapphire} />}
@@ -86,7 +88,8 @@ function Packages() {
             </div>
           </div>
 
-          <p className="packs__tap-info">- - - Tap for more info - - -</p>
+          <p className="packs__tap-info">Tap for more info</p>
+          <p className="packs__click-info">Click for more info</p>
         </article>
         <div className="package-info__mobile">
           {ruby && <PackageInfo ruby={ruby} />}
@@ -120,8 +123,10 @@ function Packages() {
               </p>
             </div>
           </div>
+          
+          <p className="packs__tap-info">Tap for more info</p>
+          <p className="packs__click-info">Click for more info</p>
 
-          <p className="packs__tap-info">- - - Tap for more info - - -</p>
         </article>
         <div className="package-info__mobile">
           {emerald && <PackageInfo emerald={emerald} />}
