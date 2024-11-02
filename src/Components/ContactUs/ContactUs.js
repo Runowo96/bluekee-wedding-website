@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import './ContactUs.scss';
 
 function ContactUs() {
@@ -12,7 +13,7 @@ function ContactUs() {
   });
 
   const [errors, setErrors] = useState({});
-  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -44,19 +45,30 @@ function ContactUs() {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      // Send the data to the server or email
-      // This could be done via an API or email service
-      alert('Form submitted successfully!'); // Placeholder for actual submission
-      console.log(formData);
-      
-      // Clear the form
-      setFormData({
-        fullName: '',
-        email: '',
-        phone: '',
-        weddingDate: '',
-        guestNumber: '',
-        additionalInfo: '',
+      // Send email using EmailJS
+      emailjs.send('service_6aggdkg', 'template_vxmm33o', {
+        user_name: formData.fullName,
+        user_email: formData.email,
+        user_phone: formData.phone,
+        wedding_date: formData.weddingDate,
+        guest_number: formData.guestNumber,
+        additional_info: formData.additionalInfo,
+      }, 'bNHkh4Uu5v7BiqybB')
+      .then((response) => {
+        alert('Form submitted successfully!');
+        console.log(response);
+        
+        // Clear the form
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          weddingDate: '',
+          guestNumber: '',
+          additionalInfo: '',
+        });
+      }, (error) => {
+        console.log('Failed to send email:', error.text);
       });
     }
   };
