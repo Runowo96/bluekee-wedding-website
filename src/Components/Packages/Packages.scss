@@ -316,8 +316,11 @@ background-color: beige;
   }
 }
 .diamond {
-  background-color: #a67c00;
+  background-color: #B9F2FF;
   animation: slideInFromRight 0.75s ease-out forwards;
+  color: black;
+  text-shadow: 2px 2px 5px white;
+
   @include tablet {
     width: 93%;
     flex-direction: row;

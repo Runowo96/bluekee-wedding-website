@@ -11,6 +11,7 @@
     margin: auto; // Center the form in the middle of the page
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Optional shadow for visual depth
     border-radius: 10px; // Rounded corners
+    margin-bottom: 1rem;
   
     h2 {
       font-family: YesevaOne; // Style the header
@@ -60,6 +61,22 @@
         &:hover {
           background-color: darkblue; // Darker color on hover
         }
+      }
+    }
+  
+    // Media queries for tablet screens
+    @media (min-width: 481px) and (max-width: 768px) {
+      max-width: 600px; // Increase max width for tablet devices
+      padding: 2rem; // Add more padding for a better layout
+    }
+  
+    // Media queries for desktop screens
+    @media (min-width: 769px) {
+      max-width: 800px; // Further increase max width for desktop
+      padding: 3rem; // More padding for a spacious look
+
+      form {
+        gap: 1.5rem; // Increase gap for form fields
       }
     }
   
