@@ -36,7 +36,7 @@ function App() {
           <Hero scrollToSection={scrollToSection} contactUsRef={contactUsRef}  />
         </section>
         <section id="packages" ref={packagesRef}>
-          <Packages />
+          <Packages scrollToSection={scrollToSection}  productLinesRef={productLinesRef} />
         </section>
         <section id="product-lines" ref={productLinesRef}>
           <ProductLines />

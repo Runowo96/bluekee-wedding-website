@@ -1,7 +1,8 @@
 import React from 'react'
 import './PackageInfo.scss'
 
-function PackageInfo({ruby, sapphire, emerald}) {
+function PackageInfo({ruby, sapphire, emerald, productLinesRef, scrollToSection}) {
+
 
   return (
     <div>
@@ -29,6 +30,9 @@ function PackageInfo({ruby, sapphire, emerald}) {
             </p>
 
       )}
+      <button  onClick={() => scrollToSection(productLinesRef)} className='packs-info__btn'>
+        <p className='packs-info__text'>Check Out The Menu</p>
+      </button>
 
     </div>
   )
