@@ -6,6 +6,7 @@ import Packages from "./Components/Packages/Packages";
 import ProductLines from "./Components/ProductLines/ProductLines";
 import Artists from "./Components/Artists/Artists";
 import ContactUs from "./Components/ContactUs/ContactUs";
+import CallToAct from "./Components/CallToAct/CallToAct";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,10 +42,11 @@ function App() {
         <section id="product-lines" ref={productLinesRef}>
           <ProductLines />
         </section>
+        <CallToAct scrollToSection={scrollToSection}  contactUsRef={contactUsRef} />
         <section id="artists" ref={artistsRef}>
-          <Artists />
+          <Artists  />
         </section>
-        <section id="artists" ref={contactUsRef}>
+        <section id="contact-us" ref={contactUsRef}>
           <ContactUs />
         </section>
       </main>
