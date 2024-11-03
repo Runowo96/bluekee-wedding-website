@@ -48,12 +48,14 @@
 
   &__img-cont {
     position: relative; /* Parent container for absolute positioning */
-    width: 100%;
+    width: 50%;
+    margin: auto;
     @include tablet {
       width: 60%;
     }
     @include desktop{
         width: 100%;
+        width: 50%;
     }
   }
 
