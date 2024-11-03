@@ -13,15 +13,6 @@ function ProductLines() {
   const guest = "FOR THE GUESTS";
   const table = "FOR THE TABLE";
   const room = "FOR THE ROOM";
-  // function productComp(data) {
-  //   return (
-  //     <section className="products__info-comp">
-  //       <ProductInfo data={data} />
-  //     </section>
-  //   );
-  // }
-
-  // const productComp = <ProductInfo/>
   return (
     <div className="product-line-cont">
       <h2 className="header">A LA CARTE</h2>
