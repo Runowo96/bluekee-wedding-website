@@ -9,22 +9,18 @@
   gap: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  //   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   @include tablet {
     gap: 2rem;
   }
 
   &__outer-cont {
     border-radius: 5px; /* Rounded corners for a softer look */
-    // box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.2),
-    //             inset -1px -1px 5px rgba(255, 255, 255, 0.7);
   }
   &__header-cont{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // width: 100%;
     padding-top: 2rem;
     padding-bottom: 0.5rem;
     gap: .5rem;
@@ -33,7 +29,6 @@
     text-align: center;
     font-size: 1.5rem;
 
-    // text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     font-family: YesevaOne;
     @include tablet {
       font-size: 2rem;
@@ -77,7 +72,5 @@ width:50px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     padding: 0.25rem 0 0.5rem 0;
-    // text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    // font-family: JosefinSans;
   }
 }

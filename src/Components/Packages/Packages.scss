@@ -62,7 +62,6 @@ background-color: beige;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    // gap: 2rem;
     padding: 2rem;
     padding-right: 6vw;
     padding-left: 7vw;
@@ -74,7 +73,6 @@ background-color: beige;
   &__header {
     text-align: center;
     padding: 1rem 1rem 0 1rem;
-    // text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     
 
     @include tablet {
@@ -88,9 +86,7 @@ background-color: beige;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 8vw 2vw 8vw 2vw;
-    // text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     color: white;
-    // text-shadow: 2px 2px 5px black;
 
     @include tablet {
       flex-direction: column;
@@ -114,7 +110,6 @@ background-color: beige;
   }
   &__icons {
     width:3.125rem;
-    // filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
     
 
 
@@ -221,7 +216,6 @@ background-color: beige;
     }
   }
   &__sub-para {
-    // width: 50%;
     width: 100%;
     text-align: center;
     font-family: JosefinSans;
@@ -236,7 +230,6 @@ background-color: beige;
       font-size: 1.25rem;
       width: 90%;
       padding-top: 2rem;
-      //   height: 100%;
       text-align: center;
       &--diamond {
         padding-top: 0;
@@ -289,8 +282,6 @@ background-color: beige;
 
 .sapphire {
   background-color: #000080;
-  // background-color: #03989e;
-  // background-color: #d0daf2;
   animation: slideInFromLeft 0.25s ease-out forwards;
 
   @include tablet {
@@ -301,7 +292,6 @@ background-color: beige;
 }
 .ruby {
   background-color: #641226;
-  // background-color: #fdc6de;
   animation: slideInFromRight 0.25s ease-out forwards;
   @include tablet {
     animation: none;
@@ -320,7 +310,6 @@ background-color: beige;
   background-color: #B9F2FF;
   animation: slideInFromRight 0.25s ease-out forwards;
   color: black;
-  // text-shadow: 2px 2px 5px white;
 
   @include tablet {
     gap: 2rem;
