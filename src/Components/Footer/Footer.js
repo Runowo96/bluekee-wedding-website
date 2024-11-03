@@ -23,7 +23,7 @@ function Footer({ scrollToSection, sections }) {
 
         <div className="footer__contact-section">
           <h3 className="footer__title">Contact Us</h3>
-          <p>Email: <a href="mailto:bluekeedesign@gmail.com">bluekeedesign@gmail.com</a></p>
+          <p>Email: <a href="mailto:bluekeedesign@gmail.com">bluekeedesignco@gmail.com</a></p>
           <p>Location: Toronto, Ontario</p>
           <div className="footer__socials">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
