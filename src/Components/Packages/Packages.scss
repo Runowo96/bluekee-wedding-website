@@ -322,6 +322,7 @@ background-color: beige;
   text-shadow: 2px 2px 5px white;
 
   @include tablet {
+    gap: 2rem;
     width: 93%;
     flex-direction: row;
     padding: 4vw 5vw 4vw 5vw;
