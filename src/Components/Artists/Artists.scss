@@ -17,6 +17,7 @@
     @include desktop{
         flex-direction: row;
         gap: 3rem;
+        align-items: start;
 
     }
 
@@ -30,6 +31,7 @@
     }
     @include desktop{
         flex-direction: column;
+        width: 100%;
     }
   }
 

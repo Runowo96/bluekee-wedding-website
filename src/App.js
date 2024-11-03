@@ -52,7 +52,8 @@ function App() {
         </section>
       </main>
       <footer>
-        <Footer />
+        <Footer scrollToSection={scrollToSection}
+            sections={{ heroRef, packagesRef, productLinesRef, artistsRef, contactUsRef }} />
       </footer>
     </div>
   );

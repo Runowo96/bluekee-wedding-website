@@ -8,7 +8,7 @@ function Footer({ scrollToSection, sections }) {
       <div className="footer__content">
         <div className="footer__logo-section">
           <h2 className="footer__logo">Blue Kee Design Co.</h2>
-          <p className="footer__tagline">Make Your Wedding Personal</p>
+          <p className="footer__tagline">Crafting Memories, One Detail at a Time</p>
         </div>
         
         <div className="footer__links-section">
