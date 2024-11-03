@@ -28,36 +28,36 @@ function NavBar({ isOpen, setIsOpen, sections, scrollToSection }) {
           </li> */}
           <li className="navbar__list-item">
             {/* <a className="navbar__list-item-text" href="#packages"> */}
-              <h2
-                className="navbar__list-item-text"
-                onClick={() => scrollToSection(sections.packagesRef)}
-              >
-                Packages
-              </h2>
+            <h2
+              className="navbar__list-item-text"
+              onClick={() => scrollToSection(sections.packagesRef)}
+            >
+              Packages
+            </h2>
             {/* </a> */}
           </li>
           <li className="navbar__list-item">
             {/* <a className="navbar__list-item-text" href="#product-lines"> */}
-              <h2
-                className="navbar__list-item-text"
-                onClick={() => scrollToSection(sections.productLinesRef)}
-              >
-                A La Carte
-              </h2>
+            <h2
+              className="navbar__list-item-text"
+              onClick={() => scrollToSection(sections.productLinesRef)}
+            >
+              A La Carte
+            </h2>
             {/* </a> */}
           </li>
           <li className="navbar__list-item">
-          <h2
-                className="navbar__list-item-text"
-                onClick={() => scrollToSection(sections.artistsRef)}
-              >
+            <h2
+              className="navbar__list-item-text"
+              onClick={() => scrollToSection(sections.artistsRef)}
+            >
               The Artists
             </h2>
           </li>
           <li className="navbar__list-item">
             <h2
               className="navbar__list-item-text"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => scrollToSection(sections.contactUsRef)}
             >
               Contact Us
             </h2>
@@ -76,34 +76,40 @@ function NavBar({ isOpen, setIsOpen, sections, scrollToSection }) {
             </a>
         </li> */}
         <li className="navbar__list-item">
-        {/* <a className="navbar__list-item-text" href="#packages"> */}
-              <h2
-                className="navbar__list-item-text"
-                onClick={() => scrollToSection(sections.packagesRef)}
-              >
-                Packages
-              </h2>
-            {/* </a>        */}
-             </li>
+          {/* <a className="navbar__list-item-text" href="#packages"> */}
+          <h2
+            className="navbar__list-item-text"
+            onClick={() => scrollToSection(sections.packagesRef)}
+          >
+            Packages
+          </h2>
+          {/* </a>        */}
+        </li>
         <li className="navbar__list-item">
-        {/* <a className="navbar__list-item-text" href="#product-lines"> */}
-              <h2
-                className="navbar__list-item-text"
-                onClick={() => scrollToSection(sections.productLinesRef)}
-              >
-                A La Carte
-              </h2>
-            {/* </a>         */}
-            </li>
+          {/* <a className="navbar__list-item-text" href="#product-lines"> */}
+          <h2
+            className="navbar__list-item-text"
+            onClick={() => scrollToSection(sections.productLinesRef)}
+          >
+            A La Carte
+          </h2>
+          {/* </a>         */}
+        </li>
         <li className="navbar__list-item">
-        <h2
-                className="navbar__list-item-text"
-                onClick={() => scrollToSection(sections.artistsRef)}
-              >
-              The Artists
-            </h2>        </li>
+          <h2
+            className="navbar__list-item-text"
+            onClick={() => scrollToSection(sections.artistsRef)}
+          >
+            The Artists
+          </h2>{" "}
+        </li>
         <li className="navbar__list-item">
-          <h2 className="navbar__list-item-text">Contact Us</h2>
+          <h2
+            className="navbar__list-item-text"
+            onClick={() => scrollToSection(sections.contactUsRef)}
+          >
+            Contact Us
+          </h2>{" "}
         </li>
       </ul>
     </div>

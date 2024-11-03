@@ -33,7 +33,7 @@ function App() {
       </header>
       <main className="test2">
         <section id="home" ref={heroRef}>
-          <Hero />
+          <Hero scrollToSection={scrollToSection} contactUsRef={contactUsRef}  />
         </section>
         <section id="packages" ref={packagesRef}>
           <Packages />
