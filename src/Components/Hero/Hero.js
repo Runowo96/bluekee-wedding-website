@@ -1,7 +1,7 @@
 import React from 'react'
 import './Hero.scss'
 
-function Hero({contactUsRef, scrollToSection}) {
+function Hero({productLinesRef, scrollToSection}) {
   return (
     <section className='hero'>
       <article className='hero__text-bg'>
@@ -14,8 +14,8 @@ function Hero({contactUsRef, scrollToSection}) {
       <h3 className='hero__h3-text'>
       Your personalized laser-cut designs for memorable events.
       </h3>
-      <button onClick={() => scrollToSection(contactUsRef)} className='hero__btn'>
-        <h3 className='hero__btn-text'>Let Us Make Your Day Yours</h3>
+      <button onClick={() => scrollToSection(productLinesRef)} className='hero__btn'>
+        <h3 className='hero__btn-text'>Browse Our Menu</h3>
       </button>
       </article>
     </section>
