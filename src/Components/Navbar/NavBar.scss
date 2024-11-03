@@ -29,10 +29,7 @@
   100% {
     transform: rotateY(0deg);
   }
-
 }
-
-
 
 .navbar {
   position: relative;
@@ -44,7 +41,7 @@
   align-items: center;
   perspective: 1000px;
 
-  @include tablet{
+  @include tablet {
     height: 7.5vw;
   }
   @include desktop {
@@ -59,7 +56,6 @@
     background-color: transparent;
 
     height: 95%;
-
   }
   &__menu-img {
     width: 100%;
@@ -76,15 +72,14 @@
     transform: translateX(-50%);
     left: 50%;
     // transform-origin: 50% 50%;
-    @include desktop{
+    @include desktop {
       display: inline-block;
-    
-      &:hover{
+
+      &:hover {
         transform: translateX(-50%);
 
         animation: rotateLogo 7.5s infinite;
       }
-
     }
     @include desktop {
       position: relative;
@@ -99,21 +94,29 @@
     display: flex;
     flex-direction: column;
     top: 12.5vw;
-    padding: 1rem;
     gap: 1rem;
     list-style: none;
     background-color: rgba($color: #ffffff, $alpha: 0.9);
     border-bottom-right-radius: 5px;
     animation: growDown 300ms ease-in-out forwards;
     transform-origin: top center;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    // box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 2rem;
-    gap: 2rem;
-    height: fit-content;
-    width: fit-content;
-    overflow: visible;
+    // padding-right: 100%;
 
+    gap: 2rem;
+    height: 100vh;
+    width: 100vw;
+    // height: fit-content;
+    // width: fit-content;
+    overflow: visible;
+    align-items: center;
+    @include tablet {
+      gap: 2.5rem;
+      top: 7.5vw;
+    }
   }
+
   &__dropdown-ul-desktop {
     display: none;
     @include desktop {
@@ -123,10 +126,10 @@
       animation: growDown 300ms ease-in-out forwards;
       transform-origin: top center;
       padding: 0 0 0 5vw;
-    //   gap: 2rem;
+      //   gap: 2rem;
       width: 100%;
       justify-content: space-between;
-      &:hover{
+      &:hover {
         cursor: pointer;
       }
     }
@@ -138,7 +141,8 @@
     text-decoration: none;
     color: black;
     font-size: 2rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 
     @include tablet {
       font-size: 3rem;
