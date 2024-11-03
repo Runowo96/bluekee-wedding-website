@@ -5,7 +5,7 @@ import table from "../../assets/icons/table-icon-white.svg";
 import room from "../../assets/icons/room-icon-white.svg";
 import PackageInfo from "../PackageInfo/PackageInfo";
 
-function Packages() {
+function Packages({productLinesRef, scrollToSection}) {
   const [ruby, setRuby] = useState(false);
   const [sapphire, setSapphire] = useState(false);
   const [emerald, setEmerald] = useState(false);
@@ -60,7 +60,7 @@ function Packages() {
 
         </article>
         <div className="package-info__mobile">
-          {sapphire && <PackageInfo sapphire={sapphire} />}
+          {sapphire && <PackageInfo scrollToSection={scrollToSection}  productLinesRef={productLinesRef} sapphire={sapphire} />}
         </div>
         <article onClick={() => ActRuby()} className="packs__sub-cont ruby">
           <div className="packs__sub-head-cont">
@@ -92,7 +92,7 @@ function Packages() {
           <p className="packs__click-info">Click for more info</p>
         </article>
         <div className="package-info__mobile">
-          {ruby && <PackageInfo ruby={ruby} />}
+          {ruby && <PackageInfo scrollToSection={scrollToSection}  productLinesRef={productLinesRef} ruby={ruby} />}
         </div>
 
         <article
@@ -129,13 +129,13 @@ function Packages() {
 
         </article>
         <div className="package-info__mobile">
-          {emerald && <PackageInfo emerald={emerald} />}
+          {emerald && <PackageInfo scrollToSection={scrollToSection}  productLinesRef={productLinesRef} emerald={emerald} />}
         </div>
 
         <div className="package-info__tablet">
-          {sapphire && <PackageInfo sapphire={sapphire} />}
-          {ruby && <PackageInfo ruby={ruby} />}
-          {emerald && <PackageInfo emerald={emerald} />}
+          {sapphire && <PackageInfo scrollToSection={scrollToSection}  productLinesRef={productLinesRef} sapphire={sapphire} />}
+          {ruby && <PackageInfo scrollToSection={scrollToSection}  productLinesRef={productLinesRef} ruby={ruby} />}
+          {emerald && <PackageInfo scrollToSection={scrollToSection}  productLinesRef={productLinesRef} emerald={emerald} />}
         </div>
 
         <article className="packs__sub-cont diamond">
