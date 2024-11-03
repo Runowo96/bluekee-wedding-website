@@ -8,6 +8,7 @@ import Artists from "./Components/Artists/Artists";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import CallToAct from "./Components/CallToAct/CallToAct";
 import Footer from "./Components/Footer/Footer";
+import Divider from "./Components/Divider/Divider";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,16 +38,23 @@ function App() {
         <section id="home" ref={heroRef}>
           <Hero scrollToSection={scrollToSection} productLinesRef={productLinesRef}  />
         </section>
+        <Divider />
         <section id="packages" ref={packagesRef}>
           <Packages scrollToSection={scrollToSection}  productLinesRef={productLinesRef} />
         </section>
+        <Divider />
+
         <section id="product-lines" ref={productLinesRef}>
           <ProductLines />
         </section>
         <CallToAct scrollToSection={scrollToSection}  contactUsRef={contactUsRef} />
+        <Divider />
+
         <section id="artists" ref={artistsRef}>
           <Artists  />
         </section>
+        <Divider />
+
         <section id="contact-us" ref={contactUsRef}>
           <ContactUs />
         </section>
