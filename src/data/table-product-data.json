@@ -3,7 +3,7 @@
         "id":"1",
         "name": "Table Numbers",
         "image": "/images/bk-logo.svg",
-        "material": ["Birchood", "Acrylic (red, blue, green, yellow)", "Walnut"],
+        "material": ["Birchood, ", "Acrylic (multiple colors available, ", "Walnut"],
         "stains": ["red","blue","yellow","green"],
         "Starting_at": "$6.25 / table"
     },
@@ -11,7 +11,7 @@
         "id":"2",
         "name": "Table Menus",
         "image": "/images/bk-logo.svg",
-        "material": ["Birchood", "Acrylic (red, blue, green, yellow)", "Walnut"],
+        "material": ["Birchood, ", "Acrylic (multiple colors available, ", "Walnut"],
         "stains": ["red","blue","yellow","green"],
         "Starting_at": "$10.50 / table"
     },
@@ -19,7 +19,7 @@
         "id":"3",
         "name": "Example",
         "image": "/images/bk-logo.svg",
-        "material": ["Birchood", "Acrylic (red, blue, green, yellow)", "Walnut"],
+        "material": ["Birchood, ", "Acrylic (multiple colors available, ", "Walnut"],
         "stains": ["red","blue","yellow","green"],
         "Starting_at": "$19.50 / table"
     },
@@ -27,7 +27,7 @@
         "id":"4",
         "name": "Example",
         "image": "/images/bk-logo.svg",
-        "material": ["Birchood", "Acrylic (red, blue, green, yellow)", "Walnut"],
+        "material": ["Birchood, ", "Acrylic (multiple colors available, ", "Walnut"],
         "stains": ["red","blue","yellow","green"],
         "Starting_at": "$18.50 / table"
     }

@@ -3,7 +3,7 @@
         "id":"1",
         "name": "Example",
         "image": "/images/bk-logo.svg",
-        "material": ["Birchood", "Acrylic (red, blue, green, yellow)", "Walnut"],
+        "material": ["Birchood, ", "Acrylic (multiple colors available), ", "Walnut"],
         "stains": ["red","blue","yellow","green"],
         "Starting_at": "$79.99 / item"
     },
@@ -11,7 +11,7 @@
         "id":"2",
         "name": "Example",
         "image": "/images/bk-logo.svg",
-        "material": ["Birchood", "Acrylic (red, blue, green, yellow)", "Walnut"],
+        "material": ["Birchood, ", "Acrylic (multiple colors available), ", "Walnut"],
         "stains": ["red","blue","yellow","green"],
         "Starting_at": "$104.99 / item"
     },
@@ -19,7 +19,7 @@
         "id":"3",
         "name": "Example",
         "image": "/images/bk-logo.svg",
-        "material": ["Birchood", "Acrylic (red, blue, green, yellow)", "Walnut"],
+        "material": ["Birchood, ", "Acrylic (multiple colors available), ", "Walnut"],
         "stains": ["red","blue","yellow","green"],
         "Starting_at": "$199.99 / item"
     },
@@ -27,7 +27,7 @@
         "id":"4",
         "name": "Example",
         "image": "/images/bk-logo.svg",
-        "material": ["Birchood", "Acrylic (red, blue, green, yellow)", "Walnut"],
+        "material": ["Birchood, ", "Acrylic (multiple colors available), ", "Walnut"],
         "stains": ["red","blue","yellow","green"],
         "Starting_at": "$249.99 / item"
     }
