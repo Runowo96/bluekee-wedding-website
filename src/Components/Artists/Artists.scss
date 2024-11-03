@@ -38,6 +38,7 @@
 
   &__header {
     text-align: center;
+    padding-top:1rem ;
     @include tablet{
         font-size: 2.5rem;
         padding-bottom: 1rem;
