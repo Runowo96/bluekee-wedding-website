@@ -7,6 +7,7 @@ import ProductLines from "./Components/ProductLines/ProductLines";
 import Artists from "./Components/Artists/Artists";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import CallToAct from "./Components/CallToAct/CallToAct";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,6 +51,9 @@ function App() {
           <ContactUs />
         </section>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
