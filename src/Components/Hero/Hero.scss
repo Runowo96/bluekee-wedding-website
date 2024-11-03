@@ -117,6 +117,9 @@
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 0.5rem;
+    &:hover{
+      cursor: pointer;
+    }
     @include tablet {
       &:hover{
         animation: inflate 1000ms ease-in-out infinite backwards;
