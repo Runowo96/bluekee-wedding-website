@@ -2,7 +2,7 @@
     {
         "id":"1",
         "name": "Name Cutouts",
-        "image": "/images/logo.avif",
+        "image": "/images/bk-logo.svg",
         "material": ["Birchood, ", "Acrylic (red, blue, green, yellow), ", "Walnut"],
         "stains": ["red, ","blue, ","yellow, ","green"],
         "Starting_at": "$1.25 / guest"
@@ -10,7 +10,7 @@
     {
         "id":"2",
         "name": "Napkin Rings",
-        "image": "/images/logo.avif",
+        "image": "/images/bk-logo.svg",
         "material": ["Birchood", "Acrylic (red, blue, green, yellow)", "Walnut"],
         "stains": ["red, ","blue, ","yellow, ","green"],
         "Starting_at": "$1.50 / guest"
@@ -18,7 +18,7 @@
     {
         "id":"3",
         "name": "Drink Cover",
-        "image": "/images/logo.avif",
+        "image": "/images/bk-logo.svg",
         "material": ["Birchood", "Acrylic (red, blue, green, yellow)", "Walnut"],
         "stains": ["red","blue","yellow","green"],
         "Starting_at": "$1.50 / guest"
@@ -26,7 +26,7 @@
     {
         "id":"4",
         "name": "Personal Menus",
-        "image": "/images/logo.avif",
+        "image": "/images/bk-logo.svg",
         "material": ["Birchood", "Acrylic (red, blue, green, yellow)", "Walnut"],
         "stains": ["red","blue","yellow","green"],
         "Starting_at": "$2.50 / guest"

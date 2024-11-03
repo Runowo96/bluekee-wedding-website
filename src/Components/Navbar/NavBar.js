@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavBar.scss";
 import menuIcon from "../../assets/icons/menu-icon.svg";
-import logo from "../../assets/logos/logo.avif";
+import logo from "../../assets/logos/bk-logo.svg";
 
 function NavBar({ isOpen, setIsOpen, sections, scrollToSection }) {
   return (
