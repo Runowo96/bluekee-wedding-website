@@ -33,11 +33,12 @@ function Artists() {
           <div className="artists__info-cont">
             <h3 className="artists__name-tablet">KEE</h3>
             <p className="artists__bio">
-              Kee holds a double major in fashion and textiles and has honed her
-              styling expertise working with brands like Indigo, Bombay Gin, and
-              Carter's Oshkosh. Beyond her professional work, Kee finds joy in
-              creating fine artwork, crocheting intricate designs, and crafting
-              unique stickers that showcase her artistic flair.
+              Kee holds a double degree in fashion design and fibers, with a
+              rich background in styling for brands like Indigo, Bombay &
+              Bowring, and HBC. Outside of her professional work, she enjoys
+              painting fine art, crocheting intricate designs, and crafting
+              unique stationery, all of which reflect her creative spirit and
+              artistic vision.
             </p>
           </div>
         </div>

@@ -3,48 +3,43 @@
 @use "../../styles/partials/typography" as *;
 
 .artists {
-
-@include desktop{
+  @include desktop {
     padding-right: 10vw;
     padding-left: 10vw;
-}
-  &__outer-cont{
+  }
+  &__outer-cont {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
     gap: 1rem;
-    @include desktop{
-        flex-direction: row;
-        gap: 3rem;
-        align-items: start;
-
+    @include desktop {
+      flex-direction: row;
+      gap: 3rem;
+      align-items: start;
     }
-
-
   }
-
 
   &__cont {
     @include tablet {
       display: flex;
       align-items: center;
     }
-    @include desktop{
-        flex-direction: column;
-        width: 100%;
+    @include desktop {
+      flex-direction: column;
+      width: 100%;
     }
   }
 
   &__header {
     text-align: center;
-    padding-top:1rem ;
-    @include tablet{
-        font-size: 2.5rem;
-        padding-bottom: 1rem;
+    padding-top: 1rem;
+    @include tablet {
+      font-size: 2.5rem;
+      padding-bottom: 1rem;
     }
-    @include desktop{
-        padding-top: 1rem;
+    @include desktop {
+      padding-top: 1rem;
     }
   }
 
@@ -55,9 +50,9 @@
     @include tablet {
       width: 60%;
     }
-    @include desktop{
-        width: 100%;
-        width: 50%;
+    @include desktop {
+      width: 100%;
+      width: 50%;
     }
   }
 
@@ -83,15 +78,15 @@
       255,
       0.75
     ); /* Optional background for readability */
-    padding: 0.75rem 0.5rem;
+    padding: 0.35rem 0.5rem 1.15rem 0.5rem;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     text-align: center;
     @include tablet {
       display: none;
     }
-    @include desktop{
-        display: block;
+    @include desktop {
+      display: block;
     }
   }
   &__name-tablet {
@@ -100,10 +95,9 @@
       display: flex;
       font-size: 2.25rem;
       font-family: YesevaOne;
-
     }
-    @include desktop{
-        display: none;
+    @include desktop {
+      display: none;
     }
   }
 
@@ -118,20 +112,19 @@
       padding: 2rem;
       gap: 1.5rem;
     }
-    @include desktop{
-        width: 100%;
-        padding: 1rem;
+    @include desktop {
+      width: 100%;
+      padding: 1rem;
     }
   }
 
   &__bio {
     font-family: JosefinSans;
-    padding-top: .5rem;
+    padding-top: 0.5rem;
 
     @include tablet {
       font-size: 1.75rem;
       padding-top: 0rem;
-
     }
   }
 }
@@ -140,7 +133,7 @@
   @include tablet {
     flex-direction: row-reverse;
   }
-  @include desktop{
+  @include desktop {
     flex-direction: column;
   }
 }

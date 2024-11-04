@@ -12,7 +12,7 @@ function Hero({productLinesRef, scrollToSection}) {
       Custom Laser-Cut Designs for Weddings and Events in Toronto
       </h1>
       <h2 className='hero__h3-text'>
-      Your personalized laser-cut designs for memorable events.
+      Crafting Memories, One Detail at a Time
       </h2>
       <button onClick={() => scrollToSection(productLinesRef)} className='hero__btn'>
         <h3 className='hero__btn-text'>Browse Our Menu</h3>
