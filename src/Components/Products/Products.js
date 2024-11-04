@@ -30,6 +30,8 @@ function Products({ data, name, icon }) {
       <img className="products__icon-img" src={icon} alt="icon" />
         <h3 className="products__header">{name}</h3>
       </div>
+      <p className="click-info">click on a product for more info</p>
+
       <div className="products">
         {data.map((item) => (
           <div key={item.id} className="products__cont">
