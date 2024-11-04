@@ -68,14 +68,14 @@ width:50px;
       }
 
     @include tablet {
-      width: 25vw;
+      width: 20vw;
       font-size: 1.25rem;
       border-bottom-left-radius:5px ;
       border-bottom-right-radius:5px ;
 
     }
     @include desktop {
-      width: 20vw;
+      width: 15vw;
     }
   }
   &__image {
