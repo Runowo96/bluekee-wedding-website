@@ -64,6 +64,10 @@
   &__img {
     width: 100%;
     border-radius: 5px;
+    background: radial-gradient(circle at center, #2e3b4e, #1c2431);
+    position: relative;
+    padding: 10px;
+    border-radius: 50%;
   }
 
   &__name {
