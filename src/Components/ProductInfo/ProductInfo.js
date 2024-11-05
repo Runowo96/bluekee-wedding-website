@@ -1,6 +1,6 @@
 import React from "react";
 import "./ProductInfo.scss";
-import backIcon from "../../assets/icons/back-icon.svg";
+import backIcon from "../../assets/icons/close-icon.svg";
 import prevIcon from "../../assets/icons/prev-icon.svg";
 import nextIcon from "../../assets/icons/next-icon.svg";
 
@@ -17,40 +17,40 @@ function ProductInfo({ data, onNext, onClose, onPrev }) {
           }}
         >
           <img className="info__close-icon" src={backIcon} alt="back arrow" />
+     
         </button>
-<div className="info__outer-sub-cont">
-<img
-          className="info__image"
-          src={currentItem.image}
-          alt={currentItem.name}
-        />
-        <div className="info__right-desktop-comp">
-          <h3 className="info__product-name">{currentItem.name}</h3>
-          <div className="info__sub-cont">
-            <p className="info__sub-header">Materials:</p>
-            <p className="info__sub-info">{currentItem.material}</p>
-          </div>
-          <div className="info__sub-cont">
-            <p className="info__sub-header">Stains:</p>
-            <p className="info__sub-info">{currentItem.stains}</p>
-          </div>
-          <div className="info__sub-cont">
-            <p className="info__sub-header">Starting at:</p>
-            <p className="info__sub-info">{currentItem.Starting_at}</p>
+        <div className="info__outer-sub-cont">
+          <img
+            className="info__image"
+            src={currentItem.image}
+            alt={currentItem.name}
+          />
+          <div className="info__right-desktop-comp">
+            <h3 className="info__product-name">{currentItem.name}</h3>
+            <div className="info__sub-cont">
+              <p className="info__sub-header">Materials:</p>
+              <p className="info__sub-info">{currentItem.material}</p>
+            </div>
+            <div className="info__sub-cont">
+              <p className="info__sub-header">Stains:</p>
+              <p className="info__sub-info">{currentItem.stains}</p>
+            </div>
+            <div className="info__sub-cont">
+              <p className="info__sub-header">Starting at:</p>
+              <p className="info__sub-info">{currentItem.Starting_at}</p>
+            </div>
           </div>
         </div>
 
-</div>
-
         <div className="info__button-cont">
-          <button className="info__button" onClick={onPrev}>
+          <button className="info__button info__btn-left" onClick={onPrev}>
             <img
               className="info__toggle-icons"
               src={prevIcon}
               alt="previous button icon"
             />
           </button>
-          <button className="info__button" onClick={onNext}>
+          <button className="info__button info__btn-right" onClick={onNext}>
             <img
               className="info__toggle-icons"
               src={nextIcon}
