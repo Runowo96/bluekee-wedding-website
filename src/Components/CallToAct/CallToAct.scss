@@ -20,6 +20,7 @@
   }
   &__header {
     color: white;
+    text-align: center;
     @include tablet {
       font-size: 3.5rem;
     }
