@@ -2,16 +2,18 @@ import React, { useState } from "react";
 import "./Products.scss";
 import ProductInfo from "../ProductInfo/ProductInfo";
 import addIcon from "../../assets/icons/add-icon.svg";
+import deleteIcon from "../../assets/icons/delete-btn.svg";
 
 function Products({ data, name, icon, cart, setCart }) {
-  const [activeProductId, setActiveProductId] = useState(null); // Track the active product by ID
+  const [activeProductId, setActiveProductId] = useState(null);
+  const [addedItems, setAddedItems] = useState([]); // Track added items
 
   const openProductInfo = (id) => {
-    setActiveProductId(id); // Open ProductInfo for this specific product
+    setActiveProductId(id);
   };
 
   const closeProductInfo = () => {
-    setActiveProductId(null); // Close the currently open ProductInfo
+    setActiveProductId(null);
   };
 
   const nextProduct = () => {
@@ -19,29 +21,33 @@ function Products({ data, name, icon, cart, setCart }) {
     const nextIndex = (currentIndex + 1) % data.length;
     setActiveProductId(data[nextIndex].id);
   };
+
   const lastProduct = () => {
     const currentIndex = data.findIndex((item) => item.id === activeProductId);
     const lastIndex = (currentIndex - 1 + data.length) % data.length;
     setActiveProductId(data[lastIndex].id);
   };
 
-  // Function to add an item to the cart
-  const addToCart = (item) => {
-    const existingItem = cart.find((cartItem) => cartItem.name === item.name);
-
-    if (existingItem) {
-      setCart(
-        cart.map((cartItem) =>
-          cartItem.name === item.name
-            ? { ...cartItem, quantity: cartItem.quantity + 1 }
-            : cartItem
-        )
-      );
-    } else {
-      setCart([...cart, { name: item.name, quantity: 1 }]);
-    }
+  // Function to remove an item from the cart by name
+  const removeFromCart = (item) => {
+    const updatedCart = cart.filter((cartItem) => cartItem.name !== item.name);
+    setCart(updatedCart);
+    setAddedItems(addedItems.filter((id) => id !== item.id));
   };
 
+  // Function to add or remove an item from the cart
+  const toggleCartItem = (item) => {
+    const itemInCart = cart.find((cartItem) => cartItem.name === item.name);
+
+    if (itemInCart) {
+      // Remove item from cart
+      removeFromCart(item);
+    } else {
+      // Add item to cart
+      setCart([...cart, { name: item.name, quantity: 1 }]);
+      setAddedItems([...addedItems, item.id]);
+    }
+  };
 
   return (
     <div className="products__outer-cont">
@@ -58,24 +64,35 @@ function Products({ data, name, icon, cart, setCart }) {
               className="products__image"
               src={item.image}
               alt={item.name}
-              onClick={() => openProductInfo(item.id)} // Open on image click
+              onClick={() => openProductInfo(item.id)}
             />
             <h4 className="products__name">{item.name}</h4>
-            <button onClick={()=>addToCart(item)} className="products__add">
-              <img src={addIcon} alt="add icon" />
-              <p>Add to Quote</p>
+
+            <button
+              onClick={() => toggleCartItem(item)}
+              className={`products__add ${addedItems.includes(item.id) ? "added" : ""}`}
+            >
+              {addedItems.includes(item.id) ? (
+                <img src={deleteIcon} alt="remove icon" />
+              ) : (
+                <img src={addIcon} alt="add icon" />
+              )}
+              <p>{addedItems.includes(item.id) ? "Remove" : "Add to Quote"}</p>
             </button>
+
             {activeProductId === item.id && (
               <section>
                 <ProductInfo
+                  addedItems={addedItems}
                   data={item}
                   onNext={nextProduct}
                   onPrev={lastProduct}
                   onClose={closeProductInfo}
                   cart={cart}
                   setCart={setCart}
-                  addToCart={addToCart}
-                  addIcon={addIcon} // Only close when X button is clicked
+                  addIcon={addIcon}
+                  deleteIcon={deleteIcon}
+                  toggleCartItem={toggleCartItem}
                 />
               </section>
             )}
