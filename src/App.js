@@ -13,6 +13,12 @@ import Divider from "./Components/Divider/Divider";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
+// Initialize cart state directly from localStorage
+const [cart, setCart] = useState(() => {
+  const storedCart = localStorage.getItem('cart');
+  return storedCart ? JSON.parse(storedCart) : [];
+});
+
   const heroRef = useRef(null);
   const packagesRef = useRef(null);
   const productLinesRef = useRef(null);
@@ -21,7 +27,7 @@ function App() {
 
   const scrollToSection = (sectionRef) => {
     sectionRef.current.scrollIntoView({ behavior: "smooth" });
-    setIsOpen(false)
+    setIsOpen(false);
   };
 
   return (
@@ -30,38 +36,63 @@ function App() {
         <nav>
           <NavBar
             scrollToSection={scrollToSection}
-            sections={{ heroRef, packagesRef, productLinesRef, artistsRef, contactUsRef }}isOpen={isOpen}setIsOpen={setIsOpen}
+            sections={{
+              heroRef,
+              packagesRef,
+              productLinesRef,
+              artistsRef,
+              contactUsRef,
+            }}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
           />
         </nav>
       </header>
       <main className="test2">
         <section id="home" ref={heroRef}>
-          <Hero scrollToSection={scrollToSection} productLinesRef={productLinesRef}  />
+          <Hero
+            scrollToSection={scrollToSection}
+            productLinesRef={productLinesRef}
+          />
         </section>
         <Divider />
         <section id="packages" ref={packagesRef}>
-          <Packages scrollToSection={scrollToSection}  productLinesRef={productLinesRef} />
+          <Packages
+            scrollToSection={scrollToSection}
+            productLinesRef={productLinesRef}
+          />
         </section>
         <Divider />
 
         <section id="product-lines" ref={productLinesRef}>
-          <ProductLines />
+          <ProductLines cart={cart} setCart={setCart} />
         </section>
-        <CallToAct scrollToSection={scrollToSection}  contactUsRef={contactUsRef} />
+        <CallToAct
+          scrollToSection={scrollToSection}
+          contactUsRef={contactUsRef}
+        />
         <Divider />
 
         <section id="artists" ref={artistsRef}>
-          <Artists  />
+          <Artists />
         </section>
         <Divider />
 
         <section id="contact-us" ref={contactUsRef}>
-          <ContactUs />
+          <ContactUs cart={cart} setCart={setCart} />
         </section>
       </main>
       <footer>
-        <Footer scrollToSection={scrollToSection}
-            sections={{ heroRef, packagesRef, productLinesRef, artistsRef, contactUsRef }} />
+        <Footer
+          scrollToSection={scrollToSection}
+          sections={{
+            heroRef,
+            packagesRef,
+            productLinesRef,
+            artistsRef,
+            contactUsRef,
+          }}
+        />
       </footer>
     </div>
   );

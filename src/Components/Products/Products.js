@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./Products.scss";
 import ProductInfo from "../ProductInfo/ProductInfo";
+import addIcon from "../../assets/icons/add-icon.svg";
 
-function Products({ data, name, icon }) {
+function Products({ data, name, icon, cart, setCart }) {
   const [activeProductId, setActiveProductId] = useState(null); // Track the active product by ID
 
   const openProductInfo = (id) => {
@@ -24,10 +25,28 @@ function Products({ data, name, icon }) {
     setActiveProductId(data[lastIndex].id);
   };
 
+  // Function to add an item to the cart
+  const addToCart = (item) => {
+    const existingItem = cart.find((cartItem) => cartItem.name === item.name);
+
+    if (existingItem) {
+      setCart(
+        cart.map((cartItem) =>
+          cartItem.name === item.name
+            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            : cartItem
+        )
+      );
+    } else {
+      setCart([...cart, { name: item.name, quantity: 1 }]);
+    }
+  };
+
+
   return (
     <div className="products__outer-cont">
       <div className="products__header-cont">
-      <img className="products__icon-img" src={icon} alt="icon" />
+        <img className="products__icon-img" src={icon} alt="icon" />
         <h3 className="products__header">{name}</h3>
       </div>
       <p className="click-info">click on a product for more info</p>
@@ -42,13 +61,21 @@ function Products({ data, name, icon }) {
               onClick={() => openProductInfo(item.id)} // Open on image click
             />
             <h4 className="products__name">{item.name}</h4>
+            <button onClick={()=>addToCart(item)} className="products__add">
+              <img src={addIcon} alt="add icon" />
+              <p>Add to Quote</p>
+            </button>
             {activeProductId === item.id && (
               <section>
                 <ProductInfo
                   data={item}
                   onNext={nextProduct}
                   onPrev={lastProduct}
-                  onClose={closeProductInfo} // Only close when X button is clicked
+                  onClose={closeProductInfo}
+                  cart={cart}
+                  setCart={setCart}
+                  addToCart={addToCart}
+                  addIcon={addIcon} // Only close when X button is clicked
                 />
               </section>
             )}

@@ -54,7 +54,7 @@ function NavBar({ isOpen, setIsOpen, sections, scrollToSection }) {
           className="navbar__list-item-text"
           onClick={() => handleItemClick(sections.contactUsRef)}
         >
-          Contact Us
+          Contact Us/Free Quote
         </h2>
       </li>
     </>

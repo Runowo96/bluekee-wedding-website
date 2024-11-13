@@ -2,93 +2,140 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
+
+
+
 .contact-us {
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem; // Add padding for mobile devices
+  max-width: 400px; // Set a max-width for better layout on small screens
+  margin: auto; // Center the form in the middle of the page
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Optional shadow for visual depth
+  border-radius: 10px; // Rounded corners
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  @include tablet {
+    margin-top: 4rem;
+  }
+  &__header{
+    text-align: center;
+  }
+
+  h2 {
+    font-family: YesevaOne; // Style the header
+    margin-bottom: 1rem; // Space between header and form
+  }
+
+  form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 1rem; // Add padding for mobile devices
-    max-width: 400px; // Set a max-width for better layout on small screens
-    margin: auto; // Center the form in the middle of the page
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Optional shadow for visual depth
-    border-radius: 10px; // Rounded corners
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-    @include tablet{
-      margin-top: 4rem;
-    }
-  
-    h2 {
-      font-family: YesevaOne; // Style the header
-      margin-bottom: 1rem; // Space between header and form
-    }
-  
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem; // Space between form fields
-  
-      label {
-        font-family: JosefinSans; // Style labels
-        margin-bottom: 0.5rem; // Space between label and input
-      }
-  
-      input,
-      textarea {
-        width: 100%; // Make inputs full width
-        padding: 0.5rem; // Add padding inside inputs
-        border: 1px solid #ccc; // Light border
-        border-radius: 5px; // Rounded corners
-        font-size: 1rem; // Font size for better readability
-        font-family: inherit; // Inherit font from parent
-  
-        &:focus {
-          border-color: blue; // Highlight border on focus
-          outline: none; // Remove default outline
-        }
-      }
-  
-      .error {
-        color: red;
-        font-size: 0.9rem; // Smaller font for error messages
-      }
-  
-      button {
-        padding: 0.75rem; // Increased padding for touch targets
-        background-color: blue; // Button color
-        color: white; // Text color
-        border: none; // Remove border
-        border-radius: 5px; // Rounded corners
-        cursor: pointer; // Pointer on hover
-        font-size: 1rem; // Button font size
-        transition: background-color 0.3s; // Transition for hover effect
-  
-        &:hover {
-          background-color: darkblue; // Darker color on hover
-        }
-      }
-    }
-  
-    // Media queries for tablet screens
-    @media (min-width: 768px) {
-      max-width: 600px; // Increase max width for tablet devices
-      padding: 2rem; // Add more padding for a better layout
-    }
-  
-    // Media queries for desktop screens
-    @media (min-width: 1280px) {
-      max-width: 800px; // Further increase max width for desktop
-      padding: 3rem; // More padding for a spacious look
+    gap: 1rem; // Space between form fields
 
-      form {
-        gap: 1.5rem; // Increase gap for form fields
+    label {
+      font-family: JosefinSans; // Style labels
+      margin-bottom: 0.5rem; // Space between label and input
+    }
+
+    input,
+    textarea {
+      width: 100%; // Make inputs full width
+      padding: 0.5rem; // Add padding inside inputs
+      border: 1px solid #ccc; // Light border
+      border-radius: 5px; // Rounded corners
+      font-size: 1rem; // Font size for better readability
+      font-family: inherit; // Inherit font from parent
+
+      &:focus {
+        border-color: blue; // Highlight border on focus
+        outline: none; // Remove default outline
       }
     }
-  
-    // Media queries for smaller screens
-    @media (max-width: 767px) {
-      max-width: 90%; // Full width on very small screens
-      padding: 1rem; // Ensure padding is consistent
+
+    .error {
+      color: red;
+      font-size: 0.9rem; // Smaller font for error messages
+    }
+
+    .submit-btn {
+      padding: 0.75rem; // Increased padding for touch targets
+      background-color: blue; // Button color
+      color: white; // Text color
+      border: none; // Remove border
+      border-radius: 5px; // Rounded corners
+      cursor: pointer; // Pointer on hover
+      font-size: 1rem; // Button font size
+      transition: background-color 0.3s; // Transition for hover effect
+
+      &:hover {
+        background-color: darkblue; // Darker color on hover
+      }
     }
   }
-  
+
+  // Media queries for tablet screens
+  @media (min-width: 768px) {
+    max-width: 600px; // Increase max width for tablet devices
+    padding: 2rem; // Add more padding for a better layout
+  }
+
+  // Media queries for desktop screens
+  @media (min-width: 1280px) {
+    max-width: 800px; // Further increase max width for desktop
+    padding: 3rem; // More padding for a spacious look
+
+    form {
+      gap: 1.5rem; // Increase gap for form fields
+    }
+  }
+
+  // Media queries for smaller screens
+  @media (max-width: 767px) {
+    max-width: 90%; // Full width on very small screens
+    padding: 1rem; // Ensure padding is consistent
+  }
+}
+
+.cart {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+  &__btn {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    color: white;
+    border: none;
+
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darkblue;
+    }
+  }
+  &__clear{
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    color: rgb(248, 53, 53);
+    border: none;
+    border: 1px solid red;
+    border-radius: 5px;
+    &:hover {
+    }
+  }
+  h3 {
+    font-family: JosefinSans;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
