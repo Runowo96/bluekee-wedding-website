@@ -4,7 +4,7 @@ import backIcon from "../../assets/icons/close-icon.svg";
 import prevIcon from "../../assets/icons/prev-icon.svg";
 import nextIcon from "../../assets/icons/next-icon.svg";
 
-function ProductInfo({ data, onNext, onClose, onPrev }) {
+function ProductInfo({ data, onNext, onClose, onPrev, addToCart, addIcon }) {
   let currentItem = data;
   return (
     <div className="info">
@@ -39,6 +39,10 @@ function ProductInfo({ data, onNext, onClose, onPrev }) {
               <p className="info__sub-header">Starting at:</p>
               <p className="info__sub-info">{currentItem.Starting_at}</p>
             </div>
+            <button onClick={()=>addToCart(currentItem)} className="products__add">
+              <img src={addIcon} alt="add icon" />
+              <p>Add to Quote</p>
+            </button>
           </div>
         </div>
 

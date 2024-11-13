@@ -9,16 +9,16 @@ import tableIcon from "../../assets/icons/table-icon-black.svg";
 import roomIcon from "../../assets/icons/room-icon-black.svg";
 
 
-function ProductLines() {
+function ProductLines({cart,setCart}) {
   const guest = "FOR THE GUESTS";
   const table = "FOR THE TABLE";
   const room = "FOR THE ROOM";
   return (
     <div className="product-line-cont">
       <h2 className="header">A LA CARTE</h2>
-      <Products data={guestData} name={guest} icon={guestIcon} />
-      <Products data={tableData} name={table} icon={tableIcon} />
-      <Products data={roomData} name={room} icon={roomIcon} />
+      <Products  cart={cart} setCart={setCart}  data={guestData} name={guest} icon={guestIcon} />
+      <Products  cart={cart} setCart={setCart}  data={tableData} name={table} icon={tableIcon} />
+      <Products  cart={cart} setCart={setCart}  data={roomData} name={room} icon={roomIcon} />
     </div>
   );
 }
