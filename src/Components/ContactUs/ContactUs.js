@@ -174,7 +174,7 @@ function ContactUs({ cart, setCart }) {
           ) : (
             <ul>
               {cart.map((item, index) => (
-                <li key={index}>
+                <li className="cart__item" key={index}>
                   {item.name}
                   <button
                   type="button"
