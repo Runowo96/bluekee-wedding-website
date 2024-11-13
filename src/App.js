@@ -9,6 +9,7 @@ import ContactUs from "./Components/ContactUs/ContactUs";
 import CallToAct from "./Components/CallToAct/CallToAct";
 import Footer from "./Components/Footer/Footer";
 import Divider from "./Components/Divider/Divider";
+import CartIcon from "./Components/CartIcon/CartIcon";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,6 +82,7 @@ const [cart, setCart] = useState(() => {
         <section id="contact-us" ref={contactUsRef}>
           <ContactUs cart={cart} setCart={setCart} />
         </section>
+        <CartIcon cart={cart} contactUsRef={contactUsRef} scrollToSection={scrollToSection} />
       </main>
       <footer>
         <Footer

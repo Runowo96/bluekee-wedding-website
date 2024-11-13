@@ -4,7 +4,7 @@ import backIcon from "../../assets/icons/close-icon.svg";
 import prevIcon from "../../assets/icons/prev-icon.svg";
 import nextIcon from "../../assets/icons/next-icon.svg";
 
-function ProductInfo({ data, onNext, onClose, onPrev, addToCart, addIcon }) {
+function ProductInfo({ data, onNext, onClose, onPrev, addToCart, addIcon, addedItems, deleteIcon, toggleCartItem }) {
   let currentItem = data;
   return (
     <div className="info">
@@ -39,9 +39,16 @@ function ProductInfo({ data, onNext, onClose, onPrev, addToCart, addIcon }) {
               <p className="info__sub-header">Starting at:</p>
               <p className="info__sub-info">{currentItem.Starting_at}</p>
             </div>
-            <button onClick={()=>addToCart(currentItem)} className="products__add">
-              <img src={addIcon} alt="add icon" />
-              <p>Add to Quote</p>
+            <button
+              onClick={() => toggleCartItem(currentItem)}
+              className={`products__add ${addedItems.includes(currentItem.id) ? "added" : ""}`}
+            >
+              {addedItems.includes(currentItem.id) ? (
+                <img src={deleteIcon} alt="remove icon" />
+              ) : (
+                <img src={addIcon} alt="add icon" />
+              )}
+              <p>{addedItems.includes(currentItem.id) ? "Remove" : "Add to Quote"}</p>
             </button>
           </div>
         </div>
