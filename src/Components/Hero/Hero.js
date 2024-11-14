@@ -2,8 +2,16 @@ import React from "react";
 import "./Hero.scss";
 
 function Hero({ productLinesRef, scrollToSection }) {
+  const getImageSrc = () => {
+    if (window.innerWidth >= 1) return "/images/bk-hero-bg-480.avif";
+    if (window.innerWidth >= 768) return "/images/bk-hero-bg-768.avif";
+    if (window.innerWidth >= 1080) return "/images/bk-hero-bg-1280.avif";
+    return "/images/bk-hero-bg-480.avif";
+  };
   return (
-    <section className="hero" style={{ backgroundImage: 'url(/images/bk-hero-bg.avif)' }}>
+    <section className="hero" 
+    style={{  backgroundImage: `url(${getImageSrc()})`}}
+>
       <article className="hero__text-bg">
         {/* <h1 className='hero__header'>
         BLUE KEE DESIGN CO.
