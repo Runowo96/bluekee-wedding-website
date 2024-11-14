@@ -3,7 +3,7 @@ import emailjs from "emailjs-com";
 import "./ContactUs.scss";
 import deleteBtn from "../../assets/icons/delete-btn.svg";
 
-function ContactUs({ cart, setCart }) {
+function ContactUs({ cart, setCart, setAddedItems, removeFromCart }) {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -15,14 +15,10 @@ function ContactUs({ cart, setCart }) {
 
   const [errors, setErrors] = useState({});
 
-
-
-
   // Save cart to localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
-        // eslint-disable-next-line
-
+    // eslint-disable-next-line
   }, [cart]);
 
   const handleChange = (e) => {
@@ -92,15 +88,10 @@ function ContactUs({ cart, setCart }) {
     }
   };
 
-  // Function to clear the cart
+  // Function to clear the entire cart
   const clearCart = () => {
     setCart([]);
-  };
-
-  // Function to remove a single item from the cart
-  const removeFromCart = (index) => {
-    const updatedCart = cart.filter((_, i) => i !== index);
-    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify([]));
   };
 
   return (
@@ -173,21 +164,23 @@ function ContactUs({ cart, setCart }) {
             <p>Cart is empty.</p>
           ) : (
             <ul>
-              {cart.map((item, index) => (
-                <li className="cart__item" key={index}>
+              {cart.map((item) => (
+                <li className="cart__item" key={item.id}>
                   {item.name}
                   <button
-                  type="button"
+                    type="button"
                     className="cart__btn"
-                    onClick={() => removeFromCart(index)}
+                    onClick={() => removeFromCart(item)}
                   >
-                    <img src={deleteBtn} alt="delete icon"/>
+                    <img src={deleteBtn} alt="delete icon" />
                   </button>
                 </li>
               ))}
             </ul>
           )}
-          <button type="button" className="cart__clear" onClick={clearCart}>Clear Cart</button>
+          <button type="button" className="cart__clear" onClick={clearCart}>
+            Clear Cart
+          </button>
         </div>
 
         <div>
@@ -199,7 +192,9 @@ function ContactUs({ cart, setCart }) {
           ></textarea>
         </div>
 
-        <button className="submit-btn" type="submit">Submit</button>
+        <button className="submit-btn" type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );

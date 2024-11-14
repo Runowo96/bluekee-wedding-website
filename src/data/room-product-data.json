@@ -1,6 +1,6 @@
 [
     {
-        "id":"1",
+        "id":"c1",
         "name": "Example",
         "image": "/images/bk-logo.svg",
         "material": ["Birchood, ", "Acrylic (multiple colors available), ", "Walnut"],
@@ -8,7 +8,7 @@
         "Starting_at": "$79.99 / item"
     },
     {
-        "id":"2",
+        "id":"c2",
         "name": "Example",
         "image": "/images/bk-logo.svg",
         "material": ["Birchood, ", "Acrylic (multiple colors available), ", "Walnut"],
@@ -16,7 +16,7 @@
         "Starting_at": "$104.99 / item"
     },
     {
-        "id":"3",
+        "id":"c3",
         "name": "Example",
         "image": "/images/bk-logo.svg",
         "material": ["Birchood, ", "Acrylic (multiple colors available), ", "Walnut"],
@@ -24,7 +24,7 @@
         "Starting_at": "$199.99 / item"
     },
     {
-        "id":"4",
+        "id":"c4",
         "name": "Example",
         "image": "/images/bk-logo.svg",
         "material": ["Birchood, ", "Acrylic (multiple colors available), ", "Walnut"],
