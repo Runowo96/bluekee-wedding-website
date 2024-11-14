@@ -98,6 +98,31 @@ function ContactUs({ cart, setCart, setAddedItems, removeFromCart }) {
     <div className="contact-us">
       <h2 className="contact-us__header">Contact Us / Free Quote</h2>
       <form onSubmit={handleSubmit}>
+      <div className="cart">
+          <h3>Your Quote ({cart.length} items)</h3>
+          {cart.length === 0 ? (
+            <p>Cart is empty.</p>
+          ) : (
+            <ul>
+              {cart.map((item) => (
+                <li className="cart__item" key={item.id}>
+                  {item.name}
+                  <button
+                    type="button"
+                    className="cart__btn"
+                    onClick={() => removeFromCart(item)}
+                  >
+                    <img src={deleteBtn} alt="delete icon" />
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+          <button type="button" className="cart__clear" onClick={clearCart}>
+            Clear Cart
+          </button>
+        </div>
+
         <div>
           <label>Full Name:</label>
           <input
@@ -158,30 +183,6 @@ function ContactUs({ cart, setCart, setAddedItems, removeFromCart }) {
           )}
         </div>
 
-        <div className="cart">
-          <h3>Your Cart ({cart.length} items)</h3>
-          {cart.length === 0 ? (
-            <p>Cart is empty.</p>
-          ) : (
-            <ul>
-              {cart.map((item) => (
-                <li className="cart__item" key={item.id}>
-                  {item.name}
-                  <button
-                    type="button"
-                    className="cart__btn"
-                    onClick={() => removeFromCart(item)}
-                  >
-                    <img src={deleteBtn} alt="delete icon" />
-                  </button>
-                </li>
-              ))}
-            </ul>
-          )}
-          <button type="button" className="cart__clear" onClick={clearCart}>
-            Clear Cart
-          </button>
-        </div>
 
         <div>
           <label>Additional Info:</label>
