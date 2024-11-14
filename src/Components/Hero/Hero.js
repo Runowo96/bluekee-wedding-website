@@ -3,7 +3,7 @@ import "./Hero.scss";
 
 function Hero({ productLinesRef, scrollToSection }) {
   return (
-    <section className="hero">
+    <section className="hero" style={{ backgroundImage: 'url(/images/bk-hero-bg.avif)' }}>
       <article className="hero__text-bg">
         {/* <h1 className='hero__header'>
         BLUE KEE DESIGN CO.
