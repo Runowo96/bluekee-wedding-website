@@ -1,12 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Products.scss";
 import ProductInfo from "../ProductInfo/ProductInfo";
 import addIcon from "../../assets/icons/add-icon.svg";
 import deleteIcon from "../../assets/icons/delete-btn.svg";
 
-function Products({ data, name, icon, cart, setCart }) {
+function Products({
+  data,
+  name,
+  icon,
+  cart,
+  setCart,
+  removeFromCart,
+  toggleCartItem,
+}) {
   const [activeProductId, setActiveProductId] = useState(null);
-  const [addedItems, setAddedItems] = useState([]); // Track added items
+
+  // UseEffect to sync cart state with localStorage
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   const openProductInfo = (id) => {
     setActiveProductId(id);
@@ -28,26 +40,25 @@ function Products({ data, name, icon, cart, setCart }) {
     setActiveProductId(data[lastIndex].id);
   };
 
-  // Function to remove an item from the cart by name
-  const removeFromCart = (item) => {
-    const updatedCart = cart.filter((cartItem) => cartItem.name !== item.name);
-    setCart(updatedCart);
-    setAddedItems(addedItems.filter((id) => id !== item.id));
-  };
-
   // Function to add or remove an item from the cart
-  const toggleCartItem = (item) => {
-    const itemInCart = cart.find((cartItem) => cartItem.name === item.name);
+  // const toggleCartItem = (item) => {
+  //   const itemInCart = cart.find((cartItem) => cartItem.name === item.name);
+  //   const storedItems = JSON.parse(localStorage.getItem("cart")) || [];
 
-    if (itemInCart) {
-      // Remove item from cart
-      removeFromCart(item);
-    } else {
-      // Add item to cart
-      setCart([...cart, { name: item.name, quantity: 1 }]);
-      setAddedItems([...addedItems, item.id]);
-    }
-  };
+  //   if (itemInCart) {
+  //     // Remove item from cart
+  //     removeFromCart(item);
+  //     const updatedItems = storedItems.filter((id) => id !== item.id);
+  //     setcart(updatedItems);
+  //     localStorage.setItem("cart", JSON.stringify(updatedItems));
+  //   } else {
+  //     // Add item to cart
+  //     setCart([...cart, { name: item.name, quantity: 1 }]);
+  //     const updatedItems = [...storedItems, item.id];
+  //     setcart(updatedItems);
+  //     localStorage.setItem("cart", JSON.stringify(updatedItems));
+  //   }
+  // };
 
   return (
     <div className="products__outer-cont">
@@ -70,25 +81,30 @@ function Products({ data, name, icon, cart, setCart }) {
 
             <button
               onClick={() => toggleCartItem(item)}
-              className={`products__add ${addedItems.includes(item.id) ? "added" : ""}`}
+              className={`products__add ${
+                cart.some((cartItem) => cartItem.id === item.id) ? "added" : ""
+              }`}
             >
-              {addedItems.includes(item.id) ? (
+              {cart.some((cartItem) => cartItem.id === item.id) ? (
                 <img src={deleteIcon} alt="remove icon" />
               ) : (
                 <img src={addIcon} alt="add icon" />
               )}
-              <p>{addedItems.includes(item.id) ? "Remove" : "Add to Quote"}</p>
+              <p>
+                {cart.some((cartItem) => cartItem.id === item.id)
+                  ? "Remove"
+                  : "Add to Quote"}
+              </p>
             </button>
 
             {activeProductId === item.id && (
               <section>
                 <ProductInfo
-                  addedItems={addedItems}
+                  cart={cart}
                   data={item}
                   onNext={nextProduct}
                   onPrev={lastProduct}
                   onClose={closeProductInfo}
-                  cart={cart}
                   setCart={setCart}
                   addIcon={addIcon}
                   deleteIcon={deleteIcon}
